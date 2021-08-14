@@ -1,5 +1,5 @@
 
-
+const commentSection = document.getElementById("comment-section");
 const sendBtn = document.getElementById("sent-btn");
 
 sendBtn.addEventListener('click', function () {
@@ -8,15 +8,15 @@ sendBtn.addEventListener('click', function () {
 
     const p = document.createElement('p');
     
-    p.innerText = textfeild.value;
+    p.innerHTML = `${textfeild.value} <button class='btn btn-danger btn-sm text-end' data-comment= 'delete'>Delete</button> `
 
-    p.className = "p-2 m-2 bg-primary rounded-3 text-white";
+    p.className = "single-comment";
 
-    const commentSection = document.getElementById("comment-section");
-    console.log(commentSection);
 
     commentSection.appendChild(p);
 
+    const commentCount = commentSection.childElementCount;
+        
     textfeild.value = '';       	
 
 })
@@ -35,4 +35,21 @@ likeBtn.addEventListener('click', function () {
     likeSpan.innerText = likeCount;
     
     likeBtn.style.color = 'green';
+})
+
+const commentBtn = document.getElementById('comment-btn');
+
+commentBtn.addEventListener('click', function () {
+    commentSection.classList.toggle('d-none');
+})
+
+commentSection.addEventListener('click', function (event) {
+    const findDeleteBtn = event.target.getAttribute('data-comment')
+    if (findDeleteBtn == 'delete') {
+        let conf = confirm(`Are you sure Delete This Comment`);
+        if (conf) {
+            commentSection.removeChild(event.target.parentNode); 
+        }
+        
+    }
 })
