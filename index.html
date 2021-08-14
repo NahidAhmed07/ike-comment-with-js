@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo like</title>
+   
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/acea1fdaa1.js" crossorigin="anonymous"></script>
+
+    <!-- animated css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- custom css  -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+       
+
+    </style>
+
+</head>
+<body>
+    <header class="container my-5">
+        <h1 class="text-center fw-bold text-white-50">MY Photo Gellary</h1>
+    </header>
+
+    <section class="container">
+        <div class="row mx-lg-5 px-lg-5 g-5 my-5">
+            <div class="col-md-6">
+                <div class="">
+                    <div class="img">
+                        <img  class=" img-fluid rounded-2 " src="./images/_DSC0031.jpg" alt="">
+                    </div>
+                    <div class="comment" id="comment"> 
+                            <div class="d-flex like-box align-items-center justify-content-evenly">
+
+                                <div>
+                                    <button id="like-btn" class="like-btn"><i class="far fa-thumbs-up me-1"></i>Like <span id="like-count"></span>
+                                    </button>
+                                </div>
+
+                                <div>
+                                    <button id="comment-btn" class="like-btn"><i class="far fa-comment-alt me-1"></i>Comment <span id="comment-count"></span> </button>
+                                </div>
+
+                                <div>
+                                    <button id="share-btn" class="like-btn animate__animated "><i class="far fa-share-square me-1"></i>Share <span id="shareCount"></span></button>
+                                </div>
+                            </div>  
+                            
+                            
+                            
+
+                            <div id="comment-section">
+                                <div class="d-flex align-items-center">
+                                    <img class="img-fluid rounded-circle me-2" style="width:30px;" src="./images/_DSC0031.jpg" alt="">`
+                                
+                                    <textarea class="comment-feild" placeholder="write comment here" id="comment-feild" rows="1"></textarea>
+                                
+                                    <button id="sent-btn" class="btn btn-primary sent-btn"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+
+                            </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="col-2">
+
+            </div> -->
+            <!-- <div class="col-md-6">
+                    <div>
+                    <div class="img">
+                        <img  class=" img-fluid rounded-1" src="./images/_DSC0031.jpg" alt="">
+                    </div>
+                    <div class="comment" id="comment">
+                        <div class="d-flex like-box align-items-center justify-content-evenly">
+                            <div>
+                                <button id="like-btn" class="like-btn"><i class="far fa-thumbs-up me-1"></i>Like <span id="like-count"></span>
+                                </button>
+                            </div>
+                            <div>
+                                <button id="comment-btn" class="like-btn"><i class="far fa-comment-alt me-1"></i>Comment <span
+                                        id="comment-count"></span> </button>
+                            </div>
+                            <div>
+                                <button id="share-btn" class="like-btn animate__animated "><i class="far fa-share-square me-1"></i>Share <span
+                                        id="shareCount"></span></button>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid rounded-circle me-2" style="width:30px;" src="./images/_DSC0031.jpg" alt="">
+                            <textarea class="comment-feild" placeholder="write comment here" id="comment-feild" rows="1"></textarea>
+                    
+                            <button disabled class="sent-btn" class="btn btn-primary sent-btn"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </section>
+    
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
